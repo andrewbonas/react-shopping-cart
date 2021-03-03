@@ -7,7 +7,6 @@ function App() {
       <header className="App-header">
       test App
       </header>
-      <Link to='/cart'>Cart</Link>
     </div>
   );
 }
