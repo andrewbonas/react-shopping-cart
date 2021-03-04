@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { trackPromise } from 'react-promise-tracker';
 import '../styles/Products.css';
 import { Link } from 'react-router-dom'
 
@@ -7,16 +8,16 @@ import { Link } from 'react-router-dom'
 function Products() {
 
   useEffect(()  => {
-    fetchItems();
-  },[]);
+    trackPromise(
+    fetchItems()
+  );
+},[]);
 
   const [items, setItems] = useState([]);
 
 const fetchItems = async () => {
   const data = await fetch('https://fakestoreapi.com/products');
-
   const items = await data.json();
-  console.log(items);
   setItems(items);
 };
 
@@ -31,7 +32,6 @@ const fetchItems = async () => {
       <p>{item.price}</p>
       </Link>
       </h1>
-
       </div>
     ))}
     </div>
