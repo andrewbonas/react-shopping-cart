@@ -1,12 +1,17 @@
-import './styles/App.css';
-import { Link } from 'react-router-dom'
+import "./styles/App.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      test App
-      </header>
+    <div className="app">
+      <div className="hero-image">
+        <div className="hero-text">
+          <h1 className="display-1">React Shop</h1>
+          <Link to="/products">
+            <button className="btn btn-secondary btn-lg m-4">View Shop</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
