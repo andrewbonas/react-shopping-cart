@@ -10,7 +10,7 @@ function Nav(cartInfo) {
       <h1 className="navbar-brand">React Shop</h1>
       <ul className="navbar-nav">
         <li>
-          <Link className="nav-item text-dark p-2 text-decoration-none" to="/">
+          <Link className="nav-item text-dark p-2 text-decoration-none" to="/react-shopping-cart/">
             Home
           </Link>
         </li>

@@ -81,7 +81,7 @@ const Routes = () => {
     <BrowserRouter>
       <Nav cartInfo={cartInfo} />
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/react-shopping-cart/" component={App} />
         <Route exact path="/products" component={Products} />
         <Route
           exact
